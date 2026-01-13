@@ -19,7 +19,7 @@ body {
       rgba(255,255,255,0.08),
       rgba(0,0,0,0.65)
     ),
-    url("img/background.png") center / cover no-repeat fixed;
+    url("img/background.jpg") center / cover no-repeat fixed;
 }
 
 .opening {
