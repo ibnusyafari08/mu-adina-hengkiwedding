@@ -19,7 +19,7 @@ body {
       rgba(255,255,255,0.08),
       rgba(0,0,0,0.65)
     ),
-    url("img/background.jpg") center / cover no-repeat fixed;
+    url("img/background.png") center / cover no-repeat fixed;
 }
 
 .opening {
@@ -99,9 +99,8 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.1rem;
-  margin-top: 1rem;
-  text
+  font-size: 2rem;
+  margin-top: 0.5rem;
 }
 
 .quran-section {
@@ -182,9 +181,10 @@ body {
 }
 
 .simply-countdown .simply-amount {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.1;
+  color: #d6b48c;
 }
 
 .simply-countdown .simply-word {
@@ -193,6 +193,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: .85;
+  color: #d6b48c;
 }
 
 
@@ -227,6 +228,83 @@ body {
 }
 
 /* ================= ACARA ================= */
+/* ================= CARD AKAD & RESEPSI ================= */
+#acara .acara-card {
+  background: linear-gradient(
+    180deg,
+    #5a3a3a,
+    #2a1b1b
+  ) !important;
+
+  border-radius: 26px;
+  padding: 35px 30px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+  color: #fdf8f3;
+  position: relative;
+  overflow: hidden;
+}
+
+/* AKSEN EMAS DI ATAS CARD */
+#acara .acara-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #d6b48c;
+  border-radius: 10px;
+}
+
+/* JUDUL AKAD / RESEPSI */
+#acara .acara-card h3 {
+  font-family: 'Sacramento', cursive;
+  font-size: 2.6rem;
+  color: #f5c37d;
+  margin-bottom: 18px;
+}
+
+/* ISI TEKS */
+#acara .acara-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: .95rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,.9);
+}
+
+/* TEKS TEBAL */
+#acara .acara-card strong {
+  color: #f7d27c;
+}
+
+/* MAPS DI DALAM CARD */
+#acara .maps-wrapper {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+  margin-top: 18px;
+}
+
+/* TOMBOL MAPS */
+#acara .maps-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 24px;
+  border-radius: 30px;
+  background: #d6b48c;
+  color: #2a1b1b;
+  font-weight: 600;
+  font-size: .85rem;
+  text-decoration: none;
+  transition: .3s;
+}
+
+#acara .maps-btn:hover {
+  background: #f5c37d;
+  color: #2a1b1b;
+}
+
 .story-section {
   min-height: 100vh;
   background: transparent !important;
@@ -244,7 +322,7 @@ body {
 }
 
 .acara-card h3 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Sacramento', cursive;
   font-size: 2.4rem;
   color: #5a3a3a;
   margin-bottom: 15px;
@@ -359,8 +437,24 @@ body {
   margin-bottom: 0;
 }
 
+/* ===== JUDUL TIMELINE WARNA GOLD ===== */
+.story-section h3,
+.story-section h4,
+.timeline-title {
+  color: #d6b48c !important;
+  font-family: 'Sacramento', cursive;
+  text-shadow: 0 2px 6px rgba(0,0,0,.45);
+}
+
+/* ===== TEKS GOLD KHUSUS ===== */
+.gold-text {
+  color: #d6b48c;
+  text-shadow: 0 2px 6px rgba(0,0,0,.45);
+}
+
 /* ================= GALERI ================= */
 .gallery-section {
+  padding-bottom: 100px;
   min-height: 100vh;
   background:
     linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
@@ -383,17 +477,13 @@ body {
 }
 
 .gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.3);
+  aspect-ratio: 4 / 3;        /* PERSEGI PANJANG */
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .5s ease;
 }
 
 .gallery-item:hover img {
@@ -415,8 +505,8 @@ body {
     url("img/bg-rsvp.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
-  min-height: 100vh;
   background: transparent;
+  padding-bottom: 100px;
 }
 
 .rsvp-card {
@@ -452,6 +542,10 @@ body {
 
 .rsvp-btn:hover {
   background: #2a1b1b;
+}
+
+.rsvp .story-title {
+  margin-bottom: 30px;
 }
 
 /* ================= GIFT ================= */
@@ -540,7 +634,7 @@ body {
 }
 
 footer {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     padding: 3rem;
     background-color: #1e0105;
     color: #fff;
@@ -754,7 +848,7 @@ footer li {
 
 .music-btn:hover {
   transform: scale(1.1);
-  background: rgb(231, 164, 10);
+  background: #fff;
   color: transparent;
 }
 
@@ -934,4 +1028,198 @@ section {
   background-color: #7a4a2e;
   border-color: #7a4a2e;
   color: #fff;
+}
+
+/* ================= ANIMASI ================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.7s ease;
+}
+
+.zoom-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.custom-navbar {
+  animation: slideDown 1s ease forwards;
+}
+
+/* Bungkus teks story saja */
+.story-item h5,
+.story-item p {
+  display: block;
+  background: linear-gradient(
+    180deg,
+    #5a3a3a,
+    #2a1b1b
+  ) !important;
+  border: 1px solid rgba(255, 215, 160, 0.25); /* aksen emas */
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin: 10px auto;
+  max-width: 90%;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+}
+
+/* Judul lebih menonjol */
+.story-item h5 {
+  margin-top: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Jarak antar card teks */
+.story-item p {
+  margin-top: 8px;
+  line-height: 1.7;
+  color: #eaeaea;
+}
+
+/* ================= FIX QURAN NO CARD ================= */
+.quran-section p,
+.quran-section .arabic-text,
+.quran-section .arti {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 auto 10px !important;
+  backdrop-filter: none !important;
+}
+
+/* Container foto */
+.mempelai-photo {
+  position: relative;
+}
+
+.initial-divider {
+  font-family: 'Love Light', cursive;
+  font-size: 56px;                 /* LEBIH BESAR */
+  font-weight: 400;
+  color: #f5d28c;                  /* EMAS TERANG */
+  margin: 14px 0 20px;
+  letter-spacing: 8px;
+  text-align: center;
+
+  /* Supaya kontras dari background */
+  text-shadow:
+    0 2px 6px rgba(0,0,0,.55),
+    0 0 18px rgba(245,210,140,.75),
+    0 0 30px rgba(214,180,140,.6);
+
+  animation: glowFloat 3.5s ease-in-out infinite;
+}
+
+.initial-divider::before,
+.initial-divider::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f5d28c, transparent);
+  vertical-align: middle;
+  margin: 0 12px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .story-item h5,
+  .story-item p {
+    max-width: 100%;
+    padding: 12px 14px;
+  }
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.center-text p {
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.fade-up,
+.fade-in,
+.zoom-in {
+  will-change: opacity, transform;
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding-bottom: 60px;
+  }
+
+  .rsvp {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-item {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+@keyframes glowFloat {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .initial-divider {
+    font-size: 46px;
+    letter-spacing: 6px;
+  }
+}
+
+/* ================= TEKS UCAPAN & DOA SAJA ================= */
+
+/* Isi ucapan & doa */
+#bukuTamu .card-body p {
+  font-size: 0.8rem;        /* lebih kecil & rapi */
+  color: #6b4a3b;           /* coklat elegan */
+  line-height: 1.6;
 }
